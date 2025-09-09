@@ -1,50 +1,28 @@
- Workflow Integration Examples
+# Google Sheets + CRM Sync
 
-A collection of real-world workflow automation and system integration projects built in Python.
-This portfolio highlights how different tools and APIs can be connected to improve efficiency, collaboration, and reporting.
-📂 Projects Included
+This project demonstrates how to sync data from a CRM API into **Google Sheets** automatically.
 
-1️⃣ Google Sheets ↔ CRM Sync
+## 🚀 Features
+- Connects to a CRM API (mocked with JSONPlaceholder).
+- Fetches user/client data.
+- Updates a Google Sheet with the latest info.
+- Clears old data before updating.
 
-Syncs customer records from a CRM API into Google Sheets.
+## 🛠️ Tech Stack
+- Python 3.9+
+- gspread (Google Sheets API)
+- requests
 
-Keeps sales teams updated without manual exports.
-
-Tech: gspread, requests
-
-
-2️⃣ Slack Task Notifier
-
-Fetches tasks from a mock Trello/Asana API.
-
-Sends new task updates directly to a Slack channel.
-
-Helps teams stay aligned without switching apps.
-
-Tech: slack-sdk, requests
-
-
-3️⃣ Report Automation (API → CSV/PDF)
-
-Collects data from a public API.
-
-Generates CSV + PDF reports automatically.
-
-Useful for dashboards, clients, and team summaries.
-
-Tech: requests, reportlab, csv
-
-
+## 📦 Setup
+1. Enable Google Sheets API & create a service account JSON key.
+2. Share your Google Sheet with the service account email.
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run:
+   ```bash
+   python crm_to_sheets.py
+   ```
 
 ---
-
-🛠️ Tech Stack
-
-Python 3.9+
-
-APIs & SDKs (Slack, Google Sheets, Mock APIs)
-
-Automation Tools (gspread, slack-sdk, reportlab)
-
-
-
