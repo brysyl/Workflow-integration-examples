@@ -1,28 +1,30 @@
-# Google Sheets + CRM Sync
+# Report Automation (API → CSV/PDF)
 
-This project demonstrates how to sync data from a CRM API into **Google Sheets** automatically.
+This project shows how to fetch data from an API, clean it, and export it into **CSV and PDF reports**.
 
 ## 🚀 Features
-- Connects to a CRM API (mocked with JSONPlaceholder).
-- Fetches user/client data.
-- Updates a Google Sheet with the latest info.
-- Clears old data before updating.
+- Fetches JSON data from a public API.
+- Converts structured data into CSV.
+- Generates a simple PDF summary report.
+- Can be scheduled with cron jobs or CI/CD pipelines.
 
 ## 🛠️ Tech Stack
 - Python 3.9+
-- gspread (Google Sheets API)
-- requests
+- Requests
+- Pandas
+- ReportLab
 
 ## 📦 Setup
-1. Enable Google Sheets API & create a service account JSON key.
-2. Share your Google Sheet with the service account email.
-3. Install dependencies:
+1. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-4. Run:
+2. Run:
    ```bash
-   python crm_to_sheets.py
+   python report_automation.py
    ```
+3. Output:
+   - `output/report.csv`
+   - `output/report.pdf`
 
 ---
